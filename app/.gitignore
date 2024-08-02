@@ -6,5 +6,5 @@ node_modules
 .output
 dist
 .DS_Store
-
+.env.local
 .vercel
