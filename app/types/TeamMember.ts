@@ -6,6 +6,9 @@ export interface TeamMember {
     _createdAt: string;
     name?: string;
     jobTitle?: string;
+    websiteLink?: string;
+    discordLink?: string;
+    githubLink?: string;
     logotype?: ImageAsset;
     description: PortableTextBlock[];
 }

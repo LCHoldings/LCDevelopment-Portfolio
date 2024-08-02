@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineField, defineType, defineArrayMember} from 'sanity'
 
 export default defineType({
   name: 'teamMember',
@@ -28,6 +28,21 @@ export default defineType({
       title: 'Description',
       type: 'text',
       rows: 4
+    }),
+    defineField({
+      name: "githubLink",
+      type: "string",
+      title: "Github Link",
+    }),
+    defineField({
+      name: "discordLink",
+      type: "string",
+      title: "Discord Link",
+    }),
+    defineField({
+      name: "websiteLink",
+      type: "string",
+      title: "Website Link",
     }),
   ],
   preview: {
