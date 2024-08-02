@@ -5,6 +5,7 @@ node_modules
 .cache
 .output
 dist
+.env
 .DS_Store
 .env.local
 .vercel
