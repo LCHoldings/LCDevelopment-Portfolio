@@ -9,17 +9,31 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify-json/radix-icons": "^1.1.14",
+    "@iconify/vue": "^4.1.2",
+    "@nuxtjs/color-mode": "^3.4.2",
+    "@nuxtjs/tailwindcss": "^6.12.1",
     "@sanity/types": "^3.50.0",
     "@types/node": "^18.17.14",
+    "autoprefixer": "^10.4.19",
     "nuxt": "^3.12.3",
     "postcss": "^8.4.39",
-    "postcss-nested": "^6.0.1"
+    "postcss-nested": "^6.0.1",
+    "shadcn-nuxt": "^0.10.4",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.3"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/sanity": "^1.10.1",
     "@portabletext/vue": "^1.0.7",
     "@sanity/image-url": "^1.0.2",
-    "groq": "^3.9.1"
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "groq": "^3.9.1",
+    "lucide-vue-next": "^0.419.0",
+    "radix-vue": "^1.9.2",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

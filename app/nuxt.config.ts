@@ -1,20 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/sanity',
-    [
-      '@nuxtjs/google-fonts',
-      {
-        families: {
-          'IBM Plex Mono': [500, 700],
-          Inter: [500, 700, 800],
-          'PT Serif': [400, 700],
-          download: true,
-          inject: true,
-        },
-      },
-    ],
-  ],
+  modules: ['@nuxtjs/sanity', "@nuxtjs/tailwindcss", "shadcn-nuxt", '@nuxtjs/color-mode'],
+  css: ['~/assets/css/main.css'],
+
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
@@ -26,10 +14,19 @@ export default defineNuxtConfig({
       stega: true,
     },
   },
+
+  shadcn: {
+    prefix: '',
+    componentDir: './components/ui'
+  },
+
   postcss: {
     plugins: {
       autoprefixer: {},
       'postcss-nested': {},
+      tailwindcss: {},
     },
   },
+
+  compatibilityDate: '2024-08-02',
 })
