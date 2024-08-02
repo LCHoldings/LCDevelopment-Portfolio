@@ -2,20 +2,20 @@
 FROM node:16-alpine
 
 # create work directory in app folder
-WORKDIR /workStudio
+WORKDIR /studio
 
 # install required packages for node image
 RUN apk --no-cache add openssh g++ make python3 git
 
 # copy over package.json files
-COPY /studio/package.json /workStudio/
-COPY /studio/package-lock.json /workStudio/
+COPY package.json /studio/
+COPY package-lock.json /studio/
 
 # install all depencies
 RUN npm ci && npm cache clean --force
 
 # copy all files to the work directory
-ADD /app/. /workStudio
+ADD . /studio
 
 # build the project
 RUN npm run build
