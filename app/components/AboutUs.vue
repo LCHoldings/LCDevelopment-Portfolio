@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type TeamMember } from '~/types/Post'
+import { type TeamMember } from '~/types/TeamMember'
 import { formatDate, urlFor } from '~/utils'
 
 const query = groq`*[ _type == "teamMember" ] | order(_createdAt desc)`
