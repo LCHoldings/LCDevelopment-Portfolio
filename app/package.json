@@ -1,6 +1,5 @@
 {
   "name": "app",
-  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
