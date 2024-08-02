@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button'
                     tailored to your needs. Let us make your dreams a reality!</p>
                 <div class="mt-10 flex gap-x-6">
                     <Button>Get in touch!</Button>
-                    <Button class="bg-transparent text-white">Learn more →</Button>
+                    <Button class="bg-transparent text-white hover:bg-transparent hover:text-white/60">Learn more →</Button>
                 </div>
             </div>
         </div>
