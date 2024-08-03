@@ -1,3 +1,3 @@
 <template>
-    <AboutUs />
+    <TeamCards />
 </template>

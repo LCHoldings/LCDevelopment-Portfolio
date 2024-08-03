@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
             <NuxtLink to="/" class="flex items-center justify-center space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6">
                     <path
@@ -10,33 +10,18 @@
                 <span class="self-center text-2xl font-bold whitespace-nowrap text-white">LC Development</span>
             </NuxtLink>
             <div class="w-auto" id="navbar-default">
-                <ul
-                    class="font-medium flex p-0 rounded-lg flex-row space-x-8 mt-0 border-0 border-gray-700">
-                    <li>
-                        <NuxtLink to="/" class="py-2 px-3 text-blue-500" aria-current="page">
-                            Homepage</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/projects"
-                            class="py-2 px-3 text-white hover:text-blue-500">
-                            Projects</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/skills"
-                            class="py-2 px-3 text-white hover:text-blue-500">
-                            Skills</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/aboutus"
-                            class="py-2 px-3 text-white hover:text-blue-500">
-                            About Us</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/contact"
-                            class="py-2 px-3 text-white hover:text-blue-500">
-                            Contact</NuxtLink>
-                    </li>
-                </ul>
+                <div class="font-medium flex p-0 rounded-lg flex-row space-x-8 mt-0 border-0 border-gray-700">
+                    <NuxtLink to="/" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
+                        Homepage</NuxtLink>
+                    <NuxtLink to="projects" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
+                        Projects</NuxtLink>
+                    <NuxtLink to="skills" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
+                        Skills</NuxtLink>
+                    <NuxtLink to="team" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
+                        About Us</NuxtLink>
+                    <NuxtLink to="contact" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
+                        Contact</NuxtLink>
+                </div>
             </div>
         </div>
     </nav>

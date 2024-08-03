@@ -44,6 +44,11 @@ export default defineType({
       type: "string",
       title: "Website Link",
     }),
+    defineField({
+      name: "emailLink",
+      type: "string",
+      title: "Email Adress",
+    }),
   ],
   preview: {
     select: {

@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-    <div class="relative isolate pt-14 px-8">
+    <div class="relative isolate pt-14 px-8 pointer-events-none">
         <!-- Thanks to Tailwind CSS for the gradient -->
         <div class="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl -top-60 mt-8" aria-hidden="true">
             <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0091ff] to-[#002aff] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"

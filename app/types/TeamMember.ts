@@ -9,6 +9,7 @@ export interface TeamMember {
     websiteLink?: string;
     discordLink?: string;
     githubLink?: string;
+    emailLink?: string;
     logotype?: ImageAsset;
     description: PortableTextBlock[];
 }
