@@ -9,7 +9,7 @@
           <span>Disable Preview</span>
         </a>
 
-        <div class="container bg-background">
+        <div class="">
           <NavBar />
           <main>
             <NuxtPage />

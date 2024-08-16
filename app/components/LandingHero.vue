@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-    <div class="relative isolate pt-14 px-4 max-w-screen-xl mx-auto">
+    <div class="relative isolate pt-14 px-4 max-w-screen-xl mx-auto h-[95vh]">
         <!-- Thanks to Tailwind CSS for the gradient -->
         <div class="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl -top-60 mt-8 pointer-events-none"
             aria-hidden="true">
@@ -12,11 +12,13 @@ import { Button } from '@/components/ui/button'
             </div>
         </div>
         <!-- End Gradient -->
-        <div class="max-w-2xl py-56">
+        <div class="py-[20vh]">
+        <div class="max-w-2xl">
             <div class="text-left">
-                <h1
-                    class="text-6xl font-bold tracking-tight text-white pointer-events-none font-manrope leading-snug">
-                    We turn your 💭 into <span class="bg-gradient-to-r from-blue-600 to-violet-600 text-transparent bg-clip-text animate-gradient">reality and beyond!</span></h1>
+                <h1 class="text-6xl font-bold tracking-tight text-white pointer-events-none font-manrope leading-snug">
+                    We turn your 💭 into <span
+                        class="bg-gradient-to-r from-blue-600 to-violet-600 text-transparent bg-clip-text animate-gradient">reality
+                        and beyond!</span></h1>
                 <p class="mt-6 text-lg leading-8 text-gray-300 pointer-events-none">We are passionate about turning your
                     ideas and dreams into reality.
                     With our expertise, we bring your vision to life and create innovative solutions
@@ -28,6 +30,7 @@ import { Button } from '@/components/ui/button'
                     <span class="transition-all text-white hover:text-white/60 my-auto font-bold">Learn more →</span>
                 </div>
             </div>
+        </div>
         </div>
         <!-- Thanks to Tailwind CSS for the gradient -->
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] pointer-events-none"
