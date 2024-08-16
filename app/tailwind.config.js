@@ -66,6 +66,10 @@ module.exports = {
         'gradient': {
           to: { 'background-position': '200% center' },
         },
+        'loop-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
         "accordion-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -94,6 +98,7 @@ module.exports = {
         "collapsible-down": "collapsible-down 0.2s ease-in-out",
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
         gradient: 'animatedgradient 6s ease infinite alternate',
+        'loop-scroll': 'loop-scroll 50s linear infinite',
       },
     },
   },
