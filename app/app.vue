@@ -77,5 +77,6 @@ Have a great day!
 // Lazyllama 🦙
 ` + "\n";
 
-console.log(asciiText + consoleText)
+// Only production!!!!!
+// console.log(asciiText + consoleText)
 </script>
