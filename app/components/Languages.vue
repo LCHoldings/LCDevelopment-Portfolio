@@ -1,7 +1,7 @@
 <template>
-    <div class="">
-        <div class="flex overflow-hidden space-x-16 group">
-            <div class="flex space-x-16 animate-loop-scroll group-hover:paused">
+    <div class="px-12">
+        <div class="flex overflow-hidden space-x-16 group [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <div class="flex space-x-16 animate-loop-scroll">
                 <img loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/c82f971de000ed90f3879ec043e0722ae9a8a0f7d65a51aaa1bb0ea29905ba4b?apiKey=08caaee685bb44688081cdc948042068"
                     class="max-w-none max-h-32" alt="Image 10" />
@@ -27,7 +27,7 @@
                     srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/c2bec5fc3ef15e3f0bb150a56bb5058e49cc2b0c4fcf27b0d87713e0b990c894?apiKey=08caaee685bb44688081cdc948042068"
                     class="max-w-none max-h-32" alt="Image 10" />
             </div>
-            <div class="flex space-x-16 animate-loop-scroll group-hover:paused" aria-hidden="true">
+            <div class="flex space-x-16 animate-loop-scroll" aria-hidden="true">
                 <img loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/c82f971de000ed90f3879ec043e0722ae9a8a0f7d65a51aaa1bb0ea29905ba4b?apiKey=08caaee685bb44688081cdc948042068"
                     class="max-w-none max-h-32" alt="Image 10" />

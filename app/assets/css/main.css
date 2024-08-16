@@ -82,12 +82,6 @@ body {
     }
 }
 
-@layer utilities {
-    .paused {
-        animation-play-state: paused;
-    }
-}
-
 .animate-gradient {
     background-size: 300%;
     -webkit-animation: animatedgradient 6s ease infinite alternate;
