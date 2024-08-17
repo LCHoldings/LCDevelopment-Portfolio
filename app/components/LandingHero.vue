@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
+import { TresCanvas } from '@tresjs/core'
+import { OrbitControls } from '@tresjs/cientos'
 </script>
 
 <template>
@@ -13,24 +15,49 @@ import { Button } from '@/components/ui/button'
         </div>
         <!-- End Gradient -->
         <div class="py-[20vh]">
-        <div class="max-w-2xl">
-            <div class="text-left">
-                <h1 class="text-6xl font-bold tracking-tight text-white pointer-events-none font-manrope leading-snug">
-                    We turn your 💭 into <span
-                        class="bg-gradient-to-r from-blue-600 to-violet-600 text-transparent bg-clip-text animate-gradient">reality
-                        and beyond!</span></h1>
-                <p class="mt-6 text-lg leading-8 text-gray-300 pointer-events-none">We are passionate about turning your
-                    ideas and dreams into reality.
-                    With our expertise, we bring your vision to life and create innovative solutions
-                    tailored to your needs. Let us make your dreams a reality!</p>
-                <div class="mt-10 flex gap-x-6">
-                    <NuxtLink to="/contact">
-                        <Button class="transition-all text-white hover:text-white/60">Get in touch!</Button>
-                    </NuxtLink>
-                    <span class="transition-all text-white hover:text-white/60 my-auto font-bold">Learn more →</span>
+            <div class="max-w-2xl flex flex-row">
+                <div class="text-left">
+                    <h1
+                        class="text-6xl font-bold tracking-tight text-white pointer-events-none font-manrope leading-snug">
+                        We turn your 💭 into <span
+                            class="bg-gradient-to-r from-blue-600 to-violet-600 text-transparent bg-clip-text animate-gradient">reality
+                            and beyond!</span></h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-300 pointer-events-none">We are passionate about turning
+                        your
+                        ideas and dreams into reality.
+                        With our expertise, we bring your vision to life and create innovative solutions
+                        tailored to your needs. Let us make your dreams a reality!</p>
+                    <div class="mt-10 flex gap-x-6">
+                        <NuxtLink to="/contact">
+                            <Button class="transition-all text-white hover:text-white/60">Get in touch!</Button>
+                        </NuxtLink>
+                        <span class="transition-all text-white hover:text-white/60 my-auto font-bold">Learn more
+                            →</span>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg overflow-hidden shadow-lg dark:shadow-gray-700 aspect-4/3 w-full sm:w-1/4 sm:absolute right-0 top-55%">
+                    <div class="size-96">
+                        <TresCanvas>
+                            <TresPerspectiveCamera :position="[9, 9, 9]" />
+                            <OrbitControls />
+                            <TresMesh :position="[-2, 2, 0]" :rotation="[0, Math.PI, 0]">
+                                <TresConeGeometry :args="[1, 1.5, 3]" />
+                                <TresMeshToonMaterial color="#82DBC5" />
+                            </TresMesh>
+                            <TresMesh :position="[0, 0, 0]" cast-shadow>
+                                <TresBoxGeometry :args="[1.5, 1.5, 1.5]" />
+                                <TresMeshToonMaterial color="#4F4F4F" />
+                            </TresMesh>
+                            <TresMesh :position="[2, -2, 0]">
+                                <TresSphereGeometry />
+                                <TresMeshToonMaterial color="#FBB03B" />
+                            </TresMesh>
+                            <TresDirectionalLight :position="[0, 2, 4]" :intensity="1.2" cast-shadow />
+                        </TresCanvas>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         <!-- Thanks to Tailwind CSS for the gradient -->
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] pointer-events-none"
@@ -42,3 +69,17 @@ import { Button } from '@/components/ui/button'
         <!-- End Gradient -->
     </div>
 </template>
+
+<style>
+.div-3d {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#canvas {
+    height: 100%;
+    width: 100%;
+}
+</style>

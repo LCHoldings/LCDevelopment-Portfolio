@@ -13,7 +13,9 @@
     "@nuxtjs/color-mode": "^3.4.2",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@sanity/types": "^3.50.0",
+    "@tresjs/nuxt": "^3.0.3",
     "@types/node": "^18.17.14",
+    "@types/three": "^0.167.1",
     "autoprefixer": "^10.4.19",
     "nuxt": "^3.12.3",
     "postcss": "^8.4.39",
@@ -26,12 +28,15 @@
     "@nuxtjs/sanity": "^1.10.1",
     "@portabletext/vue": "^1.0.7",
     "@sanity/image-url": "^1.0.2",
+    "@tresjs/cientos": "^3.9.0",
+    "@tresjs/core": "^4.2.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "groq": "^3.9.1",
     "lucide-vue-next": "^0.419.0",
     "radix-vue": "^1.9.2",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.167.1"
   }
 }
