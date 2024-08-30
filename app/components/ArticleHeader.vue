@@ -10,7 +10,7 @@ function formatDate(date) {
 }
 
 const query = groq`*[ _type == "teamMember" && name == $name][0]`
-const { data: teamMember } = await useSanityQuery<TeamMember>(query2, {
+const { data: teamMember } = await useSanityQuery<TeamMember>(query, {
     name: props.author,
 })
 </script>

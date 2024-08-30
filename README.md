@@ -29,7 +29,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 📝 About The Project
 
 [![LC Development Portfolio](screenshots/website.png)](https://lcdevelopment.net)
 
@@ -43,7 +43,7 @@ Some stuff in here will be quite quirky, so don't be surprised if you see some w
 
 
 
-### Made using
+### 🛠️ Made using
 
 This section contains some of the most notable tools/libraries used in this project.
 
@@ -58,7 +58,7 @@ This section contains some of the most notable tools/libraries used in this proj
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 🏗️ Getting Started
 
 How to run this project locally.
 
@@ -116,25 +116,25 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- ROADMAP -->
-## Roadmap
+## 🗺️ Roadmap
 
-- [X] Release project
-- [ ] Full mobile support (responsiveness)
-- [ ] Add Changelog
-- [ ] Create Development branch
-- [ ] Clean up the code
-- [ ] Dark Mode/Light mode
-- [ ] Improve the project post page
-- [ ] Multi-language Support
-    - [ ] Swedish
-    - [ ] English
+- [X] 🚢 Release project
+- [ ] 📱 Full mobile support (responsiveness)
+- [ ] 🪵 Add Changelog
+- [ ] 🌿 Create Development branch
+- [ ] 🧹 Clean up the code
+- [ ] 🌙 Dark Mode/Light mode
+- [ ] 📖 Improve the project post page
+- [ ] ✒️ Multi-language Support
+    - [ ] 🇸🇪 Swedish
+    - [ ] 🇺🇸 English
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## ⛑️ Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -147,7 +147,7 @@ Don't forget to give the project a star! Thanks!
 4. Push to the Branch (`git push`)
 5. Open a Pull Request
 
-### Top contributors:
+### 🏆 Top contributors:
 
 <a href="https://github.com/LCHoldings/LCDevelopment-Portfolio/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=LCHoldings/LCDevelopment-Portfolio" alt="contrib.rocks image" />
@@ -157,7 +157,7 @@ Don't forget to give the project a star! Thanks!
 
 
 <!-- CONTACT -->
-## Contact
+## 💌 Contact
 
 Lazyllama - [@Lazyllamaa](https://discord.com/users/754965470888722484) - llama@lcholdings.net
 
@@ -168,7 +168,7 @@ Project Link: [https://github.com/lcholdings/lcdevelopment-portfolio](https://gi
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## 🌟 Acknowledgments
 
 Thanks to the following people for their help and inspiration:
 
