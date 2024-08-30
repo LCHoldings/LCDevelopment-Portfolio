@@ -11,7 +11,7 @@
                 <div class="">
                     <NavBar />
                     <main>
-                        <ErrorPage :statusCode="error.statusCode" />
+                        <ErrorPage :statusCode="error?.statusCode ?? 404" />
                     </main>
                     <Footer />
                 </div>
@@ -82,6 +82,6 @@ Have a great day!
 // Lazyllama 🦙
 ` + "\n";
 
-// Only production!!!!!
+// Only production or console spam!!!!!
 // console.log(asciiText + consoleText)
 </script>

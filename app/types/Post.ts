@@ -4,9 +4,14 @@ export interface Post {
   _id: string;
   _type: "post";
   _createdAt: string;
-  title?: string;
+  title: string;
+  author: string;
+  type: string;
   slug: Slug;
-  excerpt?: string;
-  mainImage?: ImageAsset;
+  otherbutton: boolean;
+  otherbuttontext?: string;
+  otherbuttonlink?: string;
+  excerpt: string;
+  mainImage: ImageAsset;
   body: PortableTextBlock[];
 }

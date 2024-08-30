@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import { redirectToEmail } from '~/utils/index'
+</script>
+
 <template>
-    <nav>
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
+    <nav class="flex justify-center">
+        <div class="max-w-screen-xl w-screen flex flex-wrap items-center justify-between mx-auto p-4 absolute">
             <NuxtLink to="/" class="flex items-center justify-center space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6">
                     <path
@@ -13,14 +17,11 @@
                 <div class="font-medium flex p-0 rounded-lg flex-row space-x-8 mt-0 border-0 border-gray-700">
                     <NuxtLink to="/" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
                         Homepage</NuxtLink>
-                    <NuxtLink to="projects" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
+                    <NuxtLink to="/projects" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
                         Projects</NuxtLink>
-                    <NuxtLink to="skills" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
-                        Skills</NuxtLink>
-                    <NuxtLink to="team" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
+                    <NuxtLink to="/team" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
                         About Us</NuxtLink>
-                    <NuxtLink to="contact" class="py-2 px-3 hover:text-blue-500" active-class="text-blue-500">
-                        Contact</NuxtLink>
+                    <button @click="redirectToEmail()" class="py-2 px-3 hover:text-blue-500">Contact</button>
                 </div>
             </div>
         </div>

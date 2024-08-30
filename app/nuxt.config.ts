@@ -9,6 +9,10 @@ export default defineNuxtConfig({
   ],
   css: ['~/assets/css/main.css'],
 
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,

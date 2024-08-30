@@ -14,3 +14,9 @@ export function urlFor(source: Image) {
   const builder = imageUrlBuilder(sanity.client)
   return builder.image(source)
 }
+
+export function redirectToEmail() {
+  const subject = "Hello from the website!";
+  const email = "mailto:llama@lcholdings.net?subject=" + encodeURIComponent(subject);
+  return window.location.href = email;
+}

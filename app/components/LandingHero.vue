@@ -1,20 +1,29 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { Button } from '@/components/ui/button'
-import { TresCanvas } from '@tresjs/core'
-import { OrbitControls } from '@tresjs/cientos'
+/* import { TresCanvas, useLoader } from '@tresjs/core'
+import { OrbitControls, GLTFModel } from '@tresjs/cientos'
+import { TextureLoader } from 'three'
+
+const texture = useLoader(TextureLoader, '/LightningTexture.png') */
+
+function redirectToEmail() {
+    const subject = "Hello from the website!";
+    const email = "mailto:llama@lcholdings.net?subject=" + encodeURIComponent(subject);
+    window.location.href = email;
+}
 </script>
 
 <template>
-    <div class="relative isolate pt-14 px-4 max-w-screen-xl mx-auto h-[95vh]">
+    <div class="relative isolate pt-14 px-4 max-w-screen-xl mx-auto overflow-y-clip h-[100vh] pointer-events-none">
         <!-- Thanks to Tailwind CSS for the gradient -->
         <div class="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl -top-60 mt-8 pointer-events-none"
             aria-hidden="true">
-            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr animate-gradient from-blue-600 to-violet-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] bg-300%"
+            <div class="relative left-[calc(20%-9rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr animate-gradient from-blue-600 to-violet-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[62.1875rem] bg-300%"
                 style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
             </div>
         </div>
         <!-- End Gradient -->
-        <div class="py-[20vh]">
+        <div class="py-[30vh]">
             <div class="max-w-2xl flex flex-row">
                 <div class="text-left">
                     <h1
@@ -27,42 +36,36 @@ import { OrbitControls } from '@tresjs/cientos'
                         ideas and dreams into reality.
                         With our expertise, we bring your vision to life and create innovative solutions
                         tailored to your needs. Let us make your dreams a reality!</p>
-                    <div class="mt-10 flex gap-x-6">
-                        <NuxtLink to="/contact">
-                            <Button class="transition-all text-white hover:text-white/60">Get in touch!</Button>
-                        </NuxtLink>
-                        <span class="transition-all text-white hover:text-white/60 my-auto font-bold">Learn more
-                            →</span>
+                    <div class="mt-10 flex gap-x-6 pointer-events-auto">
+                        <Button class="transition-all text-white hover:text-white/60" @click="redirectToEmail()">Get in
+                            touch!</Button>
+                        <span class="transition-all text-white hover:text-white/60 my-auto font-bold">
+                            <NuxtLink to="projects">Previous work →</NuxtLink>
+                        </span>
                     </div>
                 </div>
-                <div
-                    class="rounded-lg overflow-hidden shadow-lg dark:shadow-gray-700 aspect-4/3 w-full sm:w-1/4 sm:absolute right-0 top-55%">
-                    <div class="size-96">
-                        <TresCanvas>
-                            <TresPerspectiveCamera :position="[9, 9, 9]" />
-                            <OrbitControls />
-                            <TresMesh :position="[-2, 2, 0]" :rotation="[0, Math.PI, 0]">
-                                <TresConeGeometry :args="[1, 1.5, 3]" />
-                                <TresMeshToonMaterial color="#82DBC5" />
-                            </TresMesh>
-                            <TresMesh :position="[0, 0, 0]" cast-shadow>
-                                <TresBoxGeometry :args="[1.5, 1.5, 1.5]" />
-                                <TresMeshToonMaterial color="#4F4F4F" />
-                            </TresMesh>
-                            <TresMesh :position="[2, -2, 0]">
-                                <TresSphereGeometry />
-                                <TresMeshToonMaterial color="#FBB03B" />
-                            </TresMesh>
-                            <TresDirectionalLight :position="[0, 2, 4]" :intensity="1.2" cast-shadow />
+                <!-- 
+                    Right part of hero 
+                    TODO: Something useful of this 
+                -->
+                <!-- <div class="rounded-lg overflow-hidden hidden sm:absolute right-0 top-55% h-[450px] w-[350px]">
+                    <div class="h-[450px] w-[350px]">
+                        <TresCanvas shadows alpha>
+                            <TresPerspectiveCamera :position="[20, 0, 45]" :look-at="[0, 0, 0]" />
+                            <Suspense>
+                                <GLTFModel path="/LightningBolt.gltf" draco />
+                            </Suspense>
+                            <TresMeshStandardMaterial :map="texture" />
+                            <TresDirectionalLight :position="[3, 3, 3]" :intensity="2" cast-shadow />
                         </TresCanvas>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <!-- Thanks to Tailwind CSS for the gradient -->
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] pointer-events-none"
+        <div class="absolute inset-x-0 top-[calc(80%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(70%-30rem)] pointer-events-none"
             aria-hidden="true">
-            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-blue-600 to-violet-600 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            <div class="relative left-[calc(30%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-blue-600 to-violet-600 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
                 style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
             </div>
         </div>
@@ -71,7 +74,8 @@ import { OrbitControls } from '@tresjs/cientos'
 </template>
 
 <style>
-.div-3d {
+/* TODO: Remove or keep this */
+/* .div-3d {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -81,5 +85,5 @@ import { OrbitControls } from '@tresjs/cientos'
 #canvas {
     height: 100%;
     width: 100%;
-}
+} */
 </style>

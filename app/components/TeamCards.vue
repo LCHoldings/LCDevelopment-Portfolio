@@ -9,13 +9,6 @@ const { data: teamMembers } = await useSanityQuery<TeamMember[]>(query)
 <template>
     <!-- Team -->
     <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-48 lg:py-14 mx-auto">
-        <!-- Title -->
-        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-            <h2 class="text-2xl font-bold md:text-4xl md:leading-tighttext-white">The Team</h2>
-            <p class="mt-1 text-neutral-400">The ones that make the magic happen.</p>
-        </div>
-        <!-- End Title -->
-
         <!-- Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div v-for="member in teamMembers">
