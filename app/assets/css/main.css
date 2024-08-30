@@ -74,13 +74,13 @@ body {
 
 @layer base {
     * {
-        border-color: hsl(var(--border));
+        border-color: hsl(var(--border)) !important;
     }
 
 
     body {
-        background-color: hsl(var(--background));
-        color: hsl(var(--foreground));
+        background-color: hsl(var(--background)) !important;
+        color: hsl(var(--foreground)) !important;
     }
 }
 
