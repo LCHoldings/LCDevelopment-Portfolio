@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     '@nuxtjs/sanity',
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
-    '@nuxtjs/color-mode',
     '@tresjs/nuxt',
   ],
   css: ['~/assets/css/main.css'],
@@ -16,7 +15,7 @@ export default defineNuxtConfig({
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
-    useCdn: false, // `false` if you want to ensure fresh data
+    useCdn: true, // `false` if you want to ensure fresh data
     apiVersion: process.env.NUXT_SANITY_API_VERSION || '2024-03-15',
     visualEditing: {
       studioUrl: process.env.NUXT_SANITY_STUDIO_URL || 'http://localhost:3333',
@@ -40,5 +39,5 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-08-02',
 
-  devtools: { enabled: true },
+  // devtools: { enabled: true },
 })

@@ -7,7 +7,7 @@ defineProps<{ post: Post }>()
 
 <template>
     <div
-        class="group flex flex-col h-full border shadow-lg rounded-xl bg-slate-900/50 border-neutral-700 overflow-hidden">
+        class="group flex flex-col h-full border shadow-xl rounded-xl bg-slate-900/50 border-neutral-900 overflow-hidden">
         <img class="h-44 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl"
             :src="urlFor(post.mainImage).width(372).height(176).url()" alt="">
 
@@ -19,7 +19,7 @@ defineProps<{ post: Post }>()
                 {{ post.title }}
             </h3>
             <p class="mt-3 text-neutral-500 h-8">
-                {{ post.excerpt.length > 70 ? post.excerpt.slice(0, 70) + '...' : post.excerpt }}
+                {{ post?.excerpt?.length > 70 ? post?.excerpt?.slice(0, 70) + '...' : post.excerpt ?? '' }}
             </p>
         </div>
         <div class="mt-auto flex border-t divide-x border-neutral-700/30 divide-neutral-700/30">

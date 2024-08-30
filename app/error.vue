@@ -82,6 +82,5 @@ Have a great day!
 // Lazyllama 🦙
 ` + "\n";
 
-// Only production or console spam!!!!!
-// console.log(asciiText + consoleText)
+console.log(asciiText + consoleText)
 </script>

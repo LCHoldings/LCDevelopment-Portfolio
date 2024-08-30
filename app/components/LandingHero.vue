@@ -1,16 +1,11 @@
 <script setup lang="js">
 import { Button } from '@/components/ui/button'
+import { redirectToEmail } from '~/utils/index'
 /* import { TresCanvas, useLoader } from '@tresjs/core'
 import { OrbitControls, GLTFModel } from '@tresjs/cientos'
 import { TextureLoader } from 'three'
 
 const texture = useLoader(TextureLoader, '/LightningTexture.png') */
-
-function redirectToEmail() {
-    const subject = "Hello from the website!";
-    const email = "mailto:llama@lcholdings.net?subject=" + encodeURIComponent(subject);
-    window.location.href = email;
-}
 </script>
 
 <template>

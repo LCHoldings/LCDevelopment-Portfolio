@@ -2,7 +2,6 @@
 defineProps<{ title: string, undertitle: string }>()
 </script>
 
-
 <template>
     <div class="relative pointer-events-none py-12 mt-24 lg:py-12 mx-auto flex flex-col justify-center items-center max-w-xl text-center mb-16">
         <h2 class="text-2xl font-bold md:text-6xl md:leading-tight text-white tracking-tight">{{ title }}</h2>

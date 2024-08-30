@@ -1,22 +1,15 @@
 <script lang="ts" setup>
 import { type TeamMember } from '~/types/TeamMember';
 import { urlFor } from '~/utils'
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger
-} from '@/components/ui/tooltip'
 
 const props = defineProps<{ title: string, date: string, type: string, author: string; }>()
-
 
 function formatDate(date) {
     var newDate = new Date(date);
     return newDate.toDateString();
 }
 
-const query2 = groq`*[ _type == "teamMember" && name == $name][0]`
+const query = groq`*[ _type == "teamMember" && name == $name][0]`
 const { data: teamMember } = await useSanityQuery<TeamMember>(query2, {
     name: props.author,
 })
@@ -37,23 +30,14 @@ const { data: teamMember } = await useSanityQuery<TeamMember>(query2, {
         <div class="flex flex-row items-center gap-3 mt-3">
             <p class="text-xl leading-8 text-white/60">{{ formatDate(props.date) }}</p>
             <p class="text-white/50">•</p>
-            <TooltipProvider>
-                <Tooltip>
-                    <TooltipTrigger>
-                        <div
-                            class="inline-flex flex-nowrap items-center  border ml-1 rounded-full p-1.5 pe-3 bg-slate-900/50 border-neutral-800">
-                            <img class="me-1.5 inline-block size-6 rounded-full"
-                                :src="urlFor(teamMember.logotype).width(24).height(24).url()" alt="Avatar">
-                            <div class="whitespace-nowrap text-sm font-medium text-white">
-                                {{ teamMember.name }}
-                            </div>
-                        </div>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Add to library</p>
-                    </TooltipContent>
-                </Tooltip>
-            </TooltipProvider>
+            <div
+                class="inline-flex flex-nowrap items-center  border ml-1 rounded-full p-1.5 pe-3 bg-slate-900/50 border-neutral-800">
+                <img class="me-1.5 inline-block size-6 rounded-full"
+                    :src="urlFor(teamMember.logotype).width(24).height(24).url()" alt="Avatar">
+                <div class="whitespace-nowrap text-sm font-medium text-white">
+                    {{ teamMember.name }}
+                </div>
+            </div>
         </div>
     </div>
 </template>
