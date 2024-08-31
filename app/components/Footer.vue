@@ -40,9 +40,9 @@ function confettiWithCursor() {
                         LC Development. All Rights Reserved.</span>
                     <div
                         class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 sm:mt-0">
-                        <NuxtLink href="/" class="hover:underline me-4 md:me-6">Homepage</NuxtLink>
                         <!-- TODO: Create branding page! -->
                         <!-- <NuxtLink href="#" class="hover:underline me-4 md:me-6">Branding</NuxtLink> -->
+                        <a href="https://github.com/lcholdings/lcdevelopment-portfolio" class="hover:underline me-4 md:me-6">GitHub Repository</a>
                         <button @click="redirectToEmail()" class="hover:underline">Contact</button>
                     </div>
                 </div>

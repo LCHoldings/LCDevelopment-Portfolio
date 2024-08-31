@@ -84,13 +84,13 @@ _Below is an example of how you can instruct your audience on installing and set
     npm install
     ```
 2. Fill out the fields `studio/.env` with your own project ID, dataset name and studio URL. (http://localhost:3333)
-   ```cs
+   ```env
     SANITY_STUDIO_PROJECT_ID="XXXXXXX"
     SANITY_STUDIO_DATASET="production"
     SANITY_STUDIO_PREVIEW_URL="http://localhost:3333"
    ```
 3. Copy `app/.env.example` to `app/.env` and fill out the fields with your own project ID, dataset name and read API token.
-   ```cs
+   ```env
     # Optional - The URL of your Sanity Studio
     NUXT_SANITY_STUDIO_URL="http://localhost:3333"
 
@@ -119,9 +119,9 @@ _Below is an example of how you can instruct your audience on installing and set
 ## 🗺️ Roadmap
 
 - [X] 🚢 Release project
+- [X] 🌿 Create Development branch
 - [ ] 📱 Full mobile support (responsiveness)
 - [ ] 🪵 Add Changelog
-- [ ] 🌿 Create Development branch
 - [ ] 🧹 Clean up the code
 - [ ] 🌙 Dark Mode/Light mode
 - [ ] 📖 Improve the project post page
