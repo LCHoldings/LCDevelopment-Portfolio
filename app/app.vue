@@ -41,6 +41,7 @@ import {
   ContextMenuShortcut,
   ContextMenuTrigger,
 } from '@/components/ui/context-menu'
+import { consoleEasterEgg } from './utils';
 
 const route = useRoute()
 const { enabled: previewEnabled, inFrame } = useSanityVisualEditingState()
@@ -53,32 +54,16 @@ function goBack() {
   history.back()
 }
 
-var asciiText = `
- __    __            __  __           
-/  |  /  |          /  |/  |          
-$$ |  $$ |  ______  $$ |$$ |  ______  
-$$ |__$$ | /      \ $$ |$$ | /      \ 
-$$    $$ |/$$$$$$  |$$ |$$ |/$$$$$$  |
-$$$$$$$$ |$$    $$ |$$ |$$ |$$ |  $$ |
-$$ |  $$ |$$$$$$$$/ $$ |$$ |$$ \__$$ |
-$$ |  $$ |$$       |$$ |$$ |$$    $$/ 
-$$/   $$/  $$$$$$$/ $$/ $$/  $$$$$$/  
-                                      
-`
-var consoleText = "\n" + `
-If you are reading this, youve managed to get the console open. If it was a mistake, you can close it easily by pressing the X in the upper right.
+useSeoMeta({
+  title: 'LC Development',
+  ogTitle: 'LC Development',
+  description: 'We are a group of two developers who are passionate about turning your ideas and dreams into reality.',
+  ogDescription: 'We are a group of two developers who are passionate about turning your ideas and dreams into reality.',
+  ogImage: 'https://lcdevelopment.net/logo.png',
+  twitterCard: 'summary_large_image',
+})
 
-If you didnt open it by mistake, you are just like me! I love to see what is going on behind the scenes!
-
-The portfolio is open-source! Check it out on GitHub: https://github.com/LCHoldings/LCDevelopment-Portfolio
-
-If you have any questions, feel free to ask me! I am always happy to help.
-
-Have a great day!
-// Lazyllama 🦙
-` + "\n";
-
-console.log(asciiText + consoleText)
+consoleEasterEgg()
 </script>
 
 <style>
@@ -93,3 +78,4 @@ console.log(asciiText + consoleText)
     filter: blur(1rem);
 }
 </style>
+
