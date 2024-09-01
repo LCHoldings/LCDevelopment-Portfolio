@@ -174,6 +174,7 @@ Thanks to the following people for their help and inspiration:
 
 * [Readme Template](https://github.com/othneildrew/Best-README-Template)
 * [Grid/Dot Background Pattern](https://ibelick.com/blog/create-grid-and-dot-backgrounds-with-css-tailwind-css)
+* [Sanity - Nuxt Template](https://www.sanity.io/templates/nuxt-sanity-clean)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
